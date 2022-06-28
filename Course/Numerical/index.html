@@ -994,13 +994,13 @@
    应用: 分享秘密: 6个人合体:还原出目标多项式; 5个人=0个人 
    龙格现象: 边界的剧烈抖动</li>
 <li>切比雪夫插值多项式: 解决龙格现象</li>
-<li>动机: 提高对插值误差的最大值的控制: <span class="arithmatex"><span class="MathJax_Preview">\frac{\prod_{i=1}^n(x-x_i)}{n!}f^{(n)}(c)</span><script type="math/tex">\frac{\prod_{i=1}^n(x-x_i)}{n!}f^{(n)}(c)</script></span></li>
-<li>假设 <span class="arithmatex"><span class="MathJax_Preview">f: [-1, 1] \rightarrow \mathbb{R}</span><script type="math/tex">f: [-1, 1] \rightarrow \mathbb{R}</script></span> \</li>
-<li>目标: 选取 <span class="arithmatex"><span class="MathJax_Preview">x_1, x_2, \cdots, x_n</span><script type="math/tex">x_1, x_2, \cdots, x_n</script></span> 最小化 <span class="arithmatex"><span class="MathJax_Preview">|| \prod(x-x_i) ||_{\infty}</span><script type="math/tex">|| \prod(x-x_i) ||_{\infty}</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">x_i = \cos{\frac{(2i-1)\pi}{2n} }</span><script type="math/tex">x_i = \cos{\frac{(2i-1)\pi}{2n} }</script></span></li>
-<li>Chebyshev插值多项式 <span class="arithmatex"><span class="MathJax_Preview">T_n(x):=2^{n-1}(x-x_1)(x-x_2)\cdots(x-x_n)</span><script type="math/tex">T_n(x):=2^{n-1}(x-x_1)(x-x_2)\cdots(x-x_n)</script></span></li>
-<li>等价于 <span class="arithmatex"><span class="MathJax_Preview">T_n(x):= \cos{(n \arccos x)}</span><script type="math/tex">T_n(x):= \cos{(n \arccos x)}</script></span></li>
-<li>递归关系: <span class="arithmatex"><span class="MathJax_Preview">T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)</span><script type="math/tex">T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)</script></span></li>
+<li>动机: 提高对插值误差的最大值的控制: <span class="arithmatex">\(\frac{\prod_{i=1}^n(x-x_i)}{n!}f^{(n)}(c)\)</span></li>
+<li>假设 <span class="arithmatex">\(f: [-1, 1] \rightarrow \mathbb{R}\)</span> \</li>
+<li>目标: 选取 <span class="arithmatex">\(x_1, x_2, \cdots, x_n\)</span> 最小化 <span class="arithmatex">\(|| \prod(x-x_i) ||_{\infty}\)</span></li>
+<li><span class="arithmatex">\(x_i = \cos{\frac{(2i-1)\pi}{2n} }\)</span></li>
+<li>Chebyshev插值多项式 <span class="arithmatex">\(T_n(x):=2^{n-1}(x-x_1)(x-x_2)\cdots(x-x_n)\)</span></li>
+<li>等价于 <span class="arithmatex">\(T_n(x):= \cos{(n \arccos x)}\)</span></li>
+<li>递归关系: <span class="arithmatex">\(T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)\)</span></li>
 <li>可以证明的是, 这是令误差最小的插值方式</li>
 </ol>
 <h2 id="_3">逼近<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -1008,13 +1008,13 @@
 <ol>
 <li>Weierstrass定理: 连续函数可以任意地被多项式逼近</li>
 <li>Bernstein Polynomial:</li>
-<li>给定: <span class="arithmatex"><span class="MathJax_Preview">f: [0,1] \rightarrow R</span><script type="math/tex">f: [0,1] \rightarrow R</script></span></li>
-<li>目标: 构造多项式 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>, 使得在 <span class="arithmatex"><span class="MathJax_Preview">x \in [0,1]</span><script type="math/tex">x \in [0,1]</script></span> 这一点上, <span class="arithmatex"><span class="MathJax_Preview">p(x)</span><script type="math/tex">p(x)</script></span> 尽可能接近 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">K \sim B(n, x)</span><script type="math/tex">K \sim B(n, x)</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">E[k]=nx</span><script type="math/tex">E[k]=nx</script></span>, <span class="arithmatex"><span class="MathJax_Preview">Var[K]=nx(1-x), Pr[K=i] = {n\choose i} x^i(1-x)^{n-i}</span><script type="math/tex">Var[K]=nx(1-x), Pr[K=i] = {n\choose i} x^i(1-x)^{n-i}</script></span></li>
-<li>Bernstein Poly的一组基: <span class="arithmatex"><span class="MathJax_Preview">b_{n,i}= {n\choose i} x^i(1-x)^{n-i}</span><script type="math/tex">b_{n,i}= {n\choose i} x^i(1-x)^{n-i}</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">\displaystyle \lim_{n\rightarrow \infty}Pr[|\frac K n - x| &gt; \delta]</span><script type="math/tex">\displaystyle \lim_{n\rightarrow \infty}Pr[|\frac K n - x| > \delta]</script></span> 对所有 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 一致成立 </li>
-<li>Bernstein Poly的本体: <span class="arithmatex"><span class="MathJax_Preview">E[f(\frac K n)] = \sum_{i=0} f(\frac i n)b_{n, i}(x)</span><script type="math/tex">E[f(\frac K n)] = \sum_{i=0} f(\frac i n)b_{n, i}(x)</script></span> <ul>
+<li>给定: <span class="arithmatex">\(f: [0,1] \rightarrow R\)</span></li>
+<li>目标: 构造多项式 <span class="arithmatex">\(p\)</span>, 使得在 <span class="arithmatex">\(x \in [0,1]\)</span> 这一点上, <span class="arithmatex">\(p(x)\)</span> 尽可能接近 <span class="arithmatex">\(f(x)\)</span>.</li>
+<li><span class="arithmatex">\(K \sim B(n, x)\)</span></li>
+<li><span class="arithmatex">\(E[k]=nx\)</span>, <span class="arithmatex">\(Var[K]=nx(1-x), Pr[K=i] = {n\choose i} x^i(1-x)^{n-i}\)</span></li>
+<li>Bernstein Poly的一组基: <span class="arithmatex">\(b_{n,i}= {n\choose i} x^i(1-x)^{n-i}\)</span></li>
+<li><span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty}Pr[|\frac K n - x| &gt; \delta]\)</span> 对所有 <span class="arithmatex">\(x\)</span> 一致成立 </li>
+<li>Bernstein Poly的本体: <span class="arithmatex">\(E[f(\frac K n)] = \sum_{i=0} f(\frac i n)b_{n, i}(x)\)</span> <ul>
 <li>个人理解: 等距采样, 加权平均(权是一个分布多项式函数)</li>
 </ul>
 </li>
@@ -1023,112 +1023,112 @@
 <h2 id="_4">范数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <hr />
 <ol>
-<li>一般向量范数: <span class="arithmatex"><span class="MathJax_Preview">\displaystyle ||x||_k = (\sum{|x_i|^k})^{\frac1 k}</span><script type="math/tex">\displaystyle ||x||_k = (\sum{|x_i|^k})^{\frac1 k}</script></span></li>
-<li>函数范数: <span class="arithmatex"><span class="MathJax_Preview">||f||_{\infty} = \sup |f|</span><script type="math/tex">||f||_{\infty} = \sup |f|</script></span>, <span class="arithmatex"><span class="MathJax_Preview">||f||_2 = (\int |f(x)|^k dx)^{\frac 1 k}</span><script type="math/tex">||f||_2 = (\int |f(x)|^k dx)^{\frac 1 k}</script></span> </li>
+<li>一般向量范数: <span class="arithmatex">\(\displaystyle ||x||_k = (\sum{|x_i|^k})^{\frac1 k}\)</span></li>
+<li>函数范数: <span class="arithmatex">\(||f||_{\infty} = \sup |f|\)</span>, <span class="arithmatex">\(||f||_2 = (\int |f(x)|^k dx)^{\frac 1 k}\)</span> </li>
 </ol>
 <h2 id="_5">最小二乘法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <hr />
 <ol>
-<li>几何: 简单投影 <span class="arithmatex"><span class="MathJax_Preview">A^TA\overline{x} = A^Tb</span><script type="math/tex">A^TA\overline{x} = A^Tb</script></span></li>
-<li>微积分: 最小化 <span class="arithmatex"><span class="MathJax_Preview">(Ax-b)^T(Ax-b)</span><script type="math/tex">(Ax-b)^T(Ax-b)</script></span>, 求解梯度 <span class="arithmatex"><span class="MathJax_Preview">\Delta = 2A^TAx-2A^Tb = 0</span><script type="math/tex">\Delta = 2A^TAx-2A^Tb = 0</script></span>.</li>
+<li>几何: 简单投影 <span class="arithmatex">\(A^TA\overline{x} = A^Tb\)</span></li>
+<li>微积分: 最小化 <span class="arithmatex">\((Ax-b)^T(Ax-b)\)</span>, 求解梯度 <span class="arithmatex">\(\Delta = 2A^TAx-2A^Tb = 0\)</span>.</li>
 <li>Gram-Schmidt: 消除已经存在的维度上分量. </li>
 </ol>
 <h2 id="_6">内积空间，正交性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <hr />
 <ol>
 <li>条件: 对称 线性 正定</li>
-<li>正交: <span class="arithmatex"><span class="MathJax_Preview">&lt;\phi_i, \phi_j&gt; = \begin{cases} C_i &amp; i = j \\ 0 &amp; i \neq j \end{cases}</span><script type="math/tex"><\phi_i, \phi_j> = \begin{cases} C_i & i = j \\ 0 & i \neq j \end{cases}</script></span></li>
-<li>Chebyshev多项式关于 <span class="arithmatex"><span class="MathJax_Preview">w(x) = \frac{1}{\sqrt{1-x^2}}</span><script type="math/tex">w(x) = \frac{1}{\sqrt{1-x^2}}</script></span> 所定义的内积正交: 
-   <span class="arithmatex"><span class="MathJax_Preview">{ &lt; f , g &gt; }_w = \int_{-1}^1 f(x) g(x) \frac{dx}{\sqrt{1-x^2}}</span><script type="math/tex">{ < f , g > }_w = \int_{-1}^1 f(x) g(x) \frac{dx}{\sqrt{1-x^2}}</script></span></li>
+<li>正交: <span class="arithmatex">\(&lt;\phi_i, \phi_j&gt; = \begin{cases} C_i &amp; i = j \\ 0 &amp; i \neq j \end{cases}\)</span></li>
+<li>Chebyshev多项式关于 <span class="arithmatex">\(w(x) = \frac{1}{\sqrt{1-x^2}}\)</span> 所定义的内积正交: 
+   <span class="arithmatex">\({ &lt; f , g &gt; }_w = \int_{-1}^1 f(x) g(x) \frac{dx}{\sqrt{1-x^2}}\)</span></li>
 <li>三角级数正交: </li>
 </ol>
 <h2 id="_7">狐里叶变换<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <hr />
 <ol>
 <li>DFT FFT IFFT</li>
-<li>动机: 多项式乘法: <span class="arithmatex"><span class="MathJax_Preview">p(x) * q(x)</span><script type="math/tex">p(x) * q(x)</script></span> </li>
-<li>给定 <span class="arithmatex"><span class="MathJax_Preview">p(x), q(x)</span><script type="math/tex">p(x), q(x)</script></span> 的系数</li>
-<li>令 <span class="arithmatex"><span class="MathJax_Preview">m \geqslant 2n+1</span><script type="math/tex">m \geqslant 2n+1</script></span>, 选定系数 <span class="arithmatex"><span class="MathJax_Preview">x_0, x_1, \cdots, x_m</span><script type="math/tex">x_0, x_1, \cdots, x_m</script></span>, 计算 $p,q $ 在上面的点值. </li>
-<li>计算 <span class="arithmatex"><span class="MathJax_Preview">r(x_i) = p(x_i)q(x_i)</span><script type="math/tex">r(x_i) = p(x_i)q(x_i)</script></span></li>
-<li>对 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 插值, 还原出 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的系数</li>
-<li>愿景: 2, 4 都能做到 <span class="arithmatex"><span class="MathJax_Preview">O(n\log n)</span><script type="math/tex">O(n\log n)</script></span></li>
+<li>动机: 多项式乘法: <span class="arithmatex">\(p(x) * q(x)\)</span> </li>
+<li>给定 <span class="arithmatex">\(p(x), q(x)\)</span> 的系数</li>
+<li>令 <span class="arithmatex">\(m \geqslant 2n+1\)</span>, 选定系数 <span class="arithmatex">\(x_0, x_1, \cdots, x_m\)</span>, 计算 $p,q $ 在上面的点值. </li>
+<li>计算 <span class="arithmatex">\(r(x_i) = p(x_i)q(x_i)\)</span></li>
+<li>对 <span class="arithmatex">\(r\)</span> 插值, 还原出 <span class="arithmatex">\(r\)</span> 的系数</li>
+<li>愿景: 2, 4 都能做到 <span class="arithmatex">\(O(n\log n)\)</span></li>
 <li>DFT: </li>
-<li>选取 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">m+1</span><script type="math/tex">m+1</script></span> 次单位根. </li>
+<li>选取 <span class="arithmatex">\(x_i\)</span> 为 <span class="arithmatex">\(m+1\)</span> 次单位根. </li>
 <li>逆变换: 插值</li>
 <li>但是, 还是很慢,,,</li>
 <li>FFT: </li>
-<li>引入分治, 将 <span class="arithmatex"><span class="MathJax_Preview">p(x)</span><script type="math/tex">p(x)</script></span> 分成奇数和偶数:<ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">E(z) = a_0 + a_2z + \cdots</span><script type="math/tex">E(z) = a_0 + a_2z + \cdots</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">O(z) = a_1 + a_3z + \cdots</span><script type="math/tex">O(z) = a_1 + a_3z + \cdots</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">p(z) = E(z^2) + zO(z^2)</span><script type="math/tex">p(z) = E(z^2) + zO(z^2)</script></span></li>
+<li>引入分治, 将 <span class="arithmatex">\(p(x)\)</span> 分成奇数和偶数:<ul>
+<li><span class="arithmatex">\(E(z) = a_0 + a_2z + \cdots\)</span></li>
+<li><span class="arithmatex">\(O(z) = a_1 + a_3z + \cdots\)</span></li>
+<li><span class="arithmatex">\(p(z) = E(z^2) + zO(z^2)\)</span></li>
 </ul>
 </li>
 <li>IFFT:<ul>
-<li>DFT, FFT: <span class="arithmatex"><span class="MathJax_Preview">p(\omega^l)= \frac1{\sqrt{n+1}}\sum a_j \omega_{lj}</span><script type="math/tex">p(\omega^l)= \frac1{\sqrt{n+1}}\sum a_j \omega_{lj}</script></span></li>
-<li>IFFT: <span class="arithmatex"><span class="MathJax_Preview">a_l = \sum p(\omega^j) \omega^{-lj}</span><script type="math/tex">a_l = \sum p(\omega^j) \omega^{-lj}</script></span>, 和DFT唯一区别是 <span class="arithmatex"><span class="MathJax_Preview">\omega \rightarrow \omega^{-1}</span><script type="math/tex">\omega \rightarrow \omega^{-1}</script></span></li>
+<li>DFT, FFT: <span class="arithmatex">\(p(\omega^l)= \frac1{\sqrt{n+1}}\sum a_j \omega_{lj}\)</span></li>
+<li>IFFT: <span class="arithmatex">\(a_l = \sum p(\omega^j) \omega^{-lj}\)</span>, 和DFT唯一区别是 <span class="arithmatex">\(\omega \rightarrow \omega^{-1}\)</span></li>
 </ul>
 </li>
 </ol>
 <h2 id="method">解方程组之迭代Method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h2>
 <ol>
-<li>线性方程组的数值稳定性: <span class="arithmatex"><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span></li>
-<li>定义条件数 <span class="arithmatex"><span class="MathJax_Preview">cond(A) = \frac{x相对误差}{b相对误差}</span><script type="math/tex">cond(A) = \frac{x相对误差}{b相对误差}</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">cond(A) = \max{\frac{||A^{-1}e||/||A^{-1}b||}{||e|| / ||b||}} = \max{\frac{||A^{-1}e||}{||e||}} \max{\frac{||Ax||}{||x||}}</span><script type="math/tex">cond(A) = \max{\frac{||A^{-1}e||/||A^{-1}b||}{||e|| / ||b||}} = \max{\frac{||A^{-1}e||}{||e||}} \max{\frac{||Ax||}{||x||}}</script></span></li>
-<li>引入矩阵的算子范数 <span class="arithmatex"><span class="MathJax_Preview">||A||:= \max{\frac{||Ax||}{||x||}}</span><script type="math/tex">||A||:= \max{\frac{||Ax||}{||x||}}</script></span><ul>
-<li>特别地有: <span class="arithmatex"><span class="MathJax_Preview">||A||_2:= \max{\frac{||Ax||_2}{||x||_2}} = \sqrt{\lambda_{max}(A^TA)}</span><script type="math/tex">||A||_2:= \max{\frac{||Ax||_2}{||x||_2}} = \sqrt{\lambda_{max}(A^TA)}</script></span></li>
+<li>线性方程组的数值稳定性: <span class="arithmatex">\(Ax = b\)</span></li>
+<li>定义条件数 <span class="arithmatex">\(cond(A) = \frac{x相对误差}{b相对误差}\)</span></li>
+<li><span class="arithmatex">\(cond(A) = \max{\frac{||A^{-1}e||/||A^{-1}b||}{||e|| / ||b||}} = \max{\frac{||A^{-1}e||}{||e||}} \max{\frac{||Ax||}{||x||}}\)</span></li>
+<li>引入矩阵的算子范数 <span class="arithmatex">\(||A||:= \max{\frac{||Ax||}{||x||}}\)</span><ul>
+<li>特别地有: <span class="arithmatex">\(||A||_2:= \max{\frac{||Ax||_2}{||x||_2}} = \sqrt{\lambda_{max}(A^TA)}\)</span></li>
 </ul>
 </li>
-<li><span class="arithmatex"><span class="MathJax_Preview">cond(A) = ||A|| \cdot ||A^{-1}||</span><script type="math/tex">cond(A) = ||A|| \cdot ||A^{-1}||</script></span></li>
-<li>高斯消元法: 朴素的 <span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span> 做法</li>
+<li><span class="arithmatex">\(cond(A) = ||A|| \cdot ||A^{-1}||\)</span></li>
+<li>高斯消元法: 朴素的 <span class="arithmatex">\(O(n^3)\)</span> 做法</li>
 <li>Jacobi迭代:  </li>
 <li>收敛的充分条件: 严格对角占优(对角线上元素超过行内其他元素)</li>
-<li>不动点迭代形式: <span class="arithmatex"><span class="MathJax_Preview">A=L+D+U</span><script type="math/tex">A=L+D+U</script></span>, <span class="arithmatex"><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span> 可以写为 <span class="arithmatex"><span class="MathJax_Preview">x=D^{-1}(b-(L+U)x)</span><script type="math/tex">x=D^{-1}(b-(L+U)x)</script></span></li>
-<li>Gauss-Seidel: <span class="arithmatex"><span class="MathJax_Preview">(L+D)x=b-Ux</span><script type="math/tex">(L+D)x=b-Ux</script></span></li>
-<li>收敛性: <span class="arithmatex"><span class="MathJax_Preview">x_{k+1} = Ax_{k} + b</span><script type="math/tex">x_{k+1} = Ax_{k} + b</script></span> <ul>
-<li>令 <span class="arithmatex"><span class="MathJax_Preview">x_*</span><script type="math/tex">x_*</script></span> 为一个不动点</li>
-<li>有 <span class="arithmatex"><span class="MathJax_Preview">x_k-x_{ * } = A^k(x_0-x_{ * })</span><script type="math/tex">x_k-x_{ * } = A^k(x_0-x_{ * })</script></span></li>
+<li>不动点迭代形式: <span class="arithmatex">\(A=L+D+U\)</span>, <span class="arithmatex">\(Ax=b\)</span> 可以写为 <span class="arithmatex">\(x=D^{-1}(b-(L+U)x)\)</span></li>
+<li>Gauss-Seidel: <span class="arithmatex">\((L+D)x=b-Ux\)</span></li>
+<li>收敛性: <span class="arithmatex">\(x_{k+1} = Ax_{k} + b\)</span> <ul>
+<li>令 <span class="arithmatex">\(x_*\)</span> 为一个不动点</li>
+<li>有 <span class="arithmatex">\(x_k-x_{ * } = A^k(x_0-x_{ * })\)</span></li>
 <li>收敛条件:</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">A^k \rightarrow 0</span><script type="math/tex">A^k \rightarrow 0</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">x_0 - x_*</span><script type="math/tex">x_0 - x_*</script></span> 存在于一个好的线性子空间里.   </li>
+<li><span class="arithmatex">\(A^k \rightarrow 0\)</span></li>
+<li><span class="arithmatex">\(x_0 - x_*\)</span> 存在于一个好的线性子空间里.   </li>
 <li>谱半径: 最大的{特征值的绝对值}</li>
 </ul>
 </li>
-<li>Jacobi迭代的谱半径: <span class="arithmatex"><span class="MathJax_Preview">\rho(D^{-1}(L+U))</span><script type="math/tex">\rho(D^{-1}(L+U))</script></span>, 若满足严格对角占有, 可以证明<span class="arithmatex"><span class="MathJax_Preview">\rho &lt; 1</span><script type="math/tex">\rho < 1</script></span></li>
-<li>Moore-Penrose伪逆 <span class="arithmatex"><span class="MathJax_Preview">\overline x = (A^TA)^{-1}A^Tb</span><script type="math/tex">\overline x = (A^TA)^{-1}A^Tb</script></span>, <span class="arithmatex"><span class="MathJax_Preview">(A^TA)^{-1}A^T</span><script type="math/tex">(A^TA)^{-1}A^T</script></span> 是维尼.(前提: 列线性无关)</li>
+<li>Jacobi迭代的谱半径: <span class="arithmatex">\(\rho(D^{-1}(L+U))\)</span>, 若满足严格对角占有, 可以证明<span class="arithmatex">\(\rho &lt; 1\)</span></li>
+<li>Moore-Penrose伪逆 <span class="arithmatex">\(\overline x = (A^TA)^{-1}A^Tb\)</span>, <span class="arithmatex">\((A^TA)^{-1}A^T\)</span> 是维尼.(前提: 列线性无关)</li>
 <li>Richardson迭代:</li>
-<li>目的: <span class="arithmatex"><span class="MathJax_Preview">A^{-1} = p(A)</span><script type="math/tex">A^{-1} = p(A)</script></span> 的近似.</li>
-<li>等价地, <span class="arithmatex"><span class="MathJax_Preview">q(x) = 1-xp(x)</span><script type="math/tex">q(x) = 1-xp(x)</script></span>, 需要寻找 <span class="arithmatex"><span class="MathJax_Preview">q(0) = 1</span><script type="math/tex">q(0) = 1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">q(x) \approx 0, \forall x &gt; 0</span><script type="math/tex">q(x) \approx 0, \forall x > 0</script></span></li>
-<li>要解 <span class="arithmatex"><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span>, 即找出 <span class="arithmatex"><span class="MathJax_Preview">x_* = p(A)b \in span(b, Ab, A^2b, \cdots)</span><script type="math/tex">x_* = p(A)b \in span(b, Ab, A^2b, \cdots)</script></span></li>
-<li>迭代形式: <span class="arithmatex"><span class="MathJax_Preview">x_{k+1} = (I -\alpha A)x_k + \alpha b</span><script type="math/tex">x_{k+1} = (I -\alpha A)x_k + \alpha b</script></span></li>
-<li>误差 <span class="arithmatex"><span class="MathJax_Preview">e_k = x_k - x_*</span><script type="math/tex">e_k = x_k - x_*</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">e^k = (I-\alpha A)e_{k-1} = (I-\alpha A)^k e_0</span><script type="math/tex">e^k = (I-\alpha A)e_{k-1} = (I-\alpha A)^k e_0</script></span></li>
-<li>收敛性: 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">\rho(I-\alpha A) = |1-\alpha\lambda_{max}| &lt; 1</span><script type="math/tex">\rho(I-\alpha A) = |1-\alpha\lambda_{max}| < 1</script></span> </li>
-<li>这里的 <span class="arithmatex"><span class="MathJax_Preview">x_k</span><script type="math/tex">x_k</script></span> 处于 <span class="arithmatex"><span class="MathJax_Preview">span(b, Ab, A^2b, \cdots, A^{k-1}b)</span><script type="math/tex">span(b, Ab, A^2b, \cdots, A^{k-1}b)</script></span> 中(Krylov子空间)</li>
-<li>Chebyshev迭代: 每一轮选取不同的 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>, 最小化 <span class="arithmatex"><span class="MathJax_Preview">||\prod_i (I-\alpha_i A)||</span><script type="math/tex">||\prod_i (I-\alpha_i A)||</script></span>, 使用了Chebyshev多项式. </li>
-<li>内积: 给定正定矩阵 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, 定义内积 $ { &lt; x, y &gt; }_A := x^TAy $.<ul>
+<li>目的: <span class="arithmatex">\(A^{-1} = p(A)\)</span> 的近似.</li>
+<li>等价地, <span class="arithmatex">\(q(x) = 1-xp(x)\)</span>, 需要寻找 <span class="arithmatex">\(q(0) = 1\)</span>, <span class="arithmatex">\(q(x) \approx 0, \forall x &gt; 0\)</span></li>
+<li>要解 <span class="arithmatex">\(Ax=b\)</span>, 即找出 <span class="arithmatex">\(x_* = p(A)b \in span(b, Ab, A^2b, \cdots)\)</span></li>
+<li>迭代形式: <span class="arithmatex">\(x_{k+1} = (I -\alpha A)x_k + \alpha b\)</span></li>
+<li>误差 <span class="arithmatex">\(e_k = x_k - x_*\)</span> 满足 <span class="arithmatex">\(e^k = (I-\alpha A)e_{k-1} = (I-\alpha A)^k e_0\)</span></li>
+<li>收敛性: 当且仅当 <span class="arithmatex">\(\rho(I-\alpha A) = |1-\alpha\lambda_{max}| &lt; 1\)</span> </li>
+<li>这里的 <span class="arithmatex">\(x_k\)</span> 处于 <span class="arithmatex">\(span(b, Ab, A^2b, \cdots, A^{k-1}b)\)</span> 中(Krylov子空间)</li>
+<li>Chebyshev迭代: 每一轮选取不同的 <span class="arithmatex">\(\alpha\)</span>, 最小化 <span class="arithmatex">\(||\prod_i (I-\alpha_i A)||\)</span>, 使用了Chebyshev多项式. </li>
+<li>内积: 给定正定矩阵 <span class="arithmatex">\(A\)</span>, 定义内积 $ { &lt; x, y &gt; }_A := x^TAy $.<ul>
 <li>内积为0, 则称 x,y 关于 A 共轭.</li>
 <li>共轭向量一定线性无关.</li>
 </ul>
 </li>
-<li>考虑不断增大的Krylov子空间序列, 设 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 为第 i 个子空间中最逼近 <span class="arithmatex"><span class="MathJax_Preview">x_*</span><script type="math/tex">x_*</script></span> 的元素.</li>
-<li>引理 <span class="arithmatex"><span class="MathJax_Preview">v_i := x_i - x_{i-1}</span><script type="math/tex">v_i := x_i - x_{i-1}</script></span>, 则  {v_i} 两两共轭. (注意到<span class="arithmatex"><span class="MathJax_Preview">Ax_j - b</span><script type="math/tex">Ax_j - b</script></span> 必然于 <span class="arithmatex"><span class="MathJax_Preview">K_j</span><script type="math/tex">K_j</script></span> 正交, 因此 <span class="arithmatex"><span class="MathJax_Preview">Av_j = A(x_j - x_{j-1}) \in K_{j-1}^{不会打的符号}</span><script type="math/tex">Av_j = A(x_j - x_{j-1}) \in K_{j-1}^{不会打的符号}</script></span>, 而 <span class="arithmatex"><span class="MathJax_Preview">v_i</span><script type="math/tex">v_i</script></span> \in K_i \in K_{j-1}, 因此这两个向量共轭) </li>
-<li>推论 <span class="arithmatex"><span class="MathJax_Preview">K_i = span(v_1, v_2, \cdots, v_i)</span><script type="math/tex">K_i = span(v_1, v_2, \cdots, v_i)</script></span></li>
+<li>考虑不断增大的Krylov子空间序列, 设 <span class="arithmatex">\(x_i\)</span> 为第 i 个子空间中最逼近 <span class="arithmatex">\(x_*\)</span> 的元素.</li>
+<li>引理 <span class="arithmatex">\(v_i := x_i - x_{i-1}\)</span>, 则  {v_i} 两两共轭. (注意到<span class="arithmatex">\(Ax_j - b\)</span> 必然于 <span class="arithmatex">\(K_j\)</span> 正交, 因此 <span class="arithmatex">\(Av_j = A(x_j - x_{j-1}) \in K_{j-1}^{不会打的符号}\)</span>, 而 <span class="arithmatex">\(v_i\)</span> \in K_i \in K_{j-1}, 因此这两个向量共轭) </li>
+<li>推论 <span class="arithmatex">\(K_i = span(v_1, v_2, \cdots, v_i)\)</span></li>
 <li>幂迭代(计算特征值)</li>
 <li>考虑任意向量的特征值分解, 可以找出最大特征值和对应的占优向量,</li>
 <li>迭代可能造成浮点数溢出, 一般每次迭代选择进行归一化.</li>
-<li>迭代得到了一个近似的特征向量方向, 求解最小二乘法 <span class="arithmatex"><span class="MathJax_Preview">||Ax-\lambda x||_2^2</span><script type="math/tex">||Ax-\lambda x||_2^2</script></span>, 法线方程为 <span class="arithmatex"><span class="MathJax_Preview">\lambda = \frac{x^TAx}{x^Tx}</span><script type="math/tex">\lambda = \frac{x^TAx}{x^Tx}</script></span>, Rayleigh Quotient.</li>
-<li>定理, 如果上述目标函数误差小于 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>, 则特征值求解误差同样小于 <span class="arithmatex"><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span>. </li>
+<li>迭代得到了一个近似的特征向量方向, 求解最小二乘法 <span class="arithmatex">\(||Ax-\lambda x||_2^2\)</span>, 法线方程为 <span class="arithmatex">\(\lambda = \frac{x^TAx}{x^Tx}\)</span>, Rayleigh Quotient.</li>
+<li>定理, 如果上述目标函数误差小于 <span class="arithmatex">\(\epsilon\)</span>, 则特征值求解误差同样小于 <span class="arithmatex">\(\epsilon\)</span>. </li>
 </ol>
 <h2 id="_8">矩阵与特征值<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ol>
-<li>正定/半正定 <span class="arithmatex"><span class="MathJax_Preview">\Leftrightarrow</span><script type="math/tex">\Leftrightarrow</script></span> 特征值正/非负</li>
-<li>特征值的min-max刻画: 最大的特征值满足: <span class="arithmatex"><span class="MathJax_Preview">\lambda_n(A) = \max \frac{x^TAx}{x^Tx}</span><script type="math/tex">\lambda_n(A) = \max \frac{x^TAx}{x^Tx}</script></span>(换成min也可以, 只需要考虑谱分解)</li>
+<li>正定/半正定 <span class="arithmatex">\(\Leftrightarrow\)</span> 特征值正/非负</li>
+<li>特征值的min-max刻画: 最大的特征值满足: <span class="arithmatex">\(\lambda_n(A) = \max \frac{x^TAx}{x^Tx}\)</span>(换成min也可以, 只需要考虑谱分解)</li>
 <li>图相关矩阵: </li>
 <li>A: 邻接矩阵, D: 度数矩阵, L = D-A: Laplacian</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">cond_2(A) = ||A||_2 ||A^{-1}||_2 = \lambda_{max} / \lambda_{min}</span><script type="math/tex">cond_2(A) = ||A||_2 ||A^{-1}||_2 = \lambda_{max} / \lambda_{min}</script></span></li>
+<li><span class="arithmatex">\(cond_2(A) = ||A||_2 ||A^{-1}||_2 = \lambda_{max} / \lambda_{min}\)</span></li>
 <li>Cayley-Hamilton:</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">Ap(A) = I</span><script type="math/tex">Ap(A) = I</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">q(x) = 1 - xP(x)</span><script type="math/tex">q(x) = 1 - xP(x)</script></span>, <span class="arithmatex"><span class="MathJax_Preview">q(A) = 0</span><script type="math/tex">q(A) = 0</script></span></li>
-<li>如何近似 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>? Richardson Iteration</li>
+<li><span class="arithmatex">\(Ap(A) = I\)</span></li>
+<li><span class="arithmatex">\(q(x) = 1 - xP(x)\)</span>, <span class="arithmatex">\(q(A) = 0\)</span></li>
+<li>如何近似 <span class="arithmatex">\(q\)</span>? Richardson Iteration</li>
 <li>奇异值分解SVD (这里好像换了个名字)</li>
 </ol>
 <h2 id="random-walk">随机游走 Random Walk<a class="headerlink" href="#random-walk" title="Permanent link">&para;</a></h2>
@@ -1142,61 +1142,61 @@
 <li>多久才能遍历每个节点各一次? (cover time)
    1,2,3都可以通过纯概率的方法去解决, 4,5见电阻网络.</li>
 <li>马尔可夫链: <del>past is in the past</del> 一切之和当前状态有关.</li>
-<li>转移矩阵描述: <span class="arithmatex"><span class="MathJax_Preview">\vec{p}_{t+1} = P\cdot \vec{p}_{t}</span><script type="math/tex">\vec{p}_{t+1} = P\cdot \vec{p}_{t}</script></span></li>
+<li>转移矩阵描述: <span class="arithmatex">\(\vec{p}_{t+1} = P\cdot \vec{p}_{t}\)</span></li>
 <li>对于有限Markov Chain, 若对应的有向图是强连通的, 那说明它是不可约的.</li>
 <li>如果Markov Chain中每个状态都是非周期的, 那么这个Chain是非周期的.</li>
-<li>引理: 对于不可约, 非周期Markov Chain, 一定存在足够大的常数, <span class="arithmatex"><span class="MathJax_Preview">P^t_{i,j} &gt; 0, \forall t \geqslant T</span><script type="math/tex">P^t_{i,j} > 0, \forall t \geqslant T</script></span></li>
-<li>稳态: <span class="arithmatex"><span class="MathJax_Preview">\vec{\pi} = \vec{\pi}\cdot P</span><script type="math/tex">\vec{\pi} = \vec{\pi}\cdot P</script></span>.</li>
-<li>回归时间: 从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 出发, 第一次返回到 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的时间 <span class="arithmatex"><span class="MathJax_Preview">H_i</span><script type="math/tex">H_i</script></span>. <span class="arithmatex"><span class="MathJax_Preview">h_i = E[H_i]</span><script type="math/tex">h_i = E[H_i]</script></span></li>
-<li>Markov基本定理: 有限, 非周期, 不可约的Markov链, 必然收敛到一个唯一的稳态分布, <span class="arithmatex"><span class="MathJax_Preview">\pi(i) = \frac 1 h_i</span><script type="math/tex">\pi(i) = \frac 1 h_i</script></span>. (怎么证,,,,)</li>
+<li>引理: 对于不可约, 非周期Markov Chain, 一定存在足够大的常数, <span class="arithmatex">\(P^t_{i,j} &gt; 0, \forall t \geqslant T\)</span></li>
+<li>稳态: <span class="arithmatex">\(\vec{\pi} = \vec{\pi}\cdot P\)</span>.</li>
+<li>回归时间: 从 <span class="arithmatex">\(i\)</span> 出发, 第一次返回到 <span class="arithmatex">\(i\)</span> 的时间 <span class="arithmatex">\(H_i\)</span>. <span class="arithmatex">\(h_i = E[H_i]\)</span></li>
+<li>Markov基本定理: 有限, 非周期, 不可约的Markov链, 必然收敛到一个唯一的稳态分布, <span class="arithmatex">\(\pi(i) = \frac 1 h_i\)</span>. (怎么证,,,,)</li>
 <li>例子: PageRank</li>
 <li>Markov相关内容详细证明见<a href="https://box.nju.edu.cn/d/62bf772ba48d4a598311/files/?p=%2F%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%2FFinite%20Markov%20Chains%20and%20Algorithmic%20Applications.pdf">本书</a></li>
 <li>无向图上的随机游走</li>
 <li>$p_{t+1}(v) = \sum_{u:uv\in E}p_t(u)\cdot \frac1{deg(u)} $</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">p_{t+1} = (AD^{-1}p_t)</span><script type="math/tex">p_{t+1} = (AD^{-1}p_t)</script></span>, <span class="arithmatex"><span class="MathJax_Preview">p_t = (AD^{-1})^t p_0</span><script type="math/tex">p_t = (AD^{-1})^t p_0</script></span></li>
-<li>稳态分布: <span class="arithmatex"><span class="MathJax_Preview">\vec{\pi} = \frac{\vec{d}}{2m}</span><script type="math/tex">\vec{\pi} = \frac{\vec{d}}{2m}</script></span>, 是 <span class="arithmatex"><span class="MathJax_Preview">AD^{-1}</span><script type="math/tex">AD^{-1}</script></span> 的一个右特征向量, 特征值为1.</li>
-<li>无向图上的马尔可夫基本定理: 对于任意有限的, 连通的, 非二分图, 不管从什么养的 <span class="arithmatex"><span class="MathJax_Preview">p_0</span><script type="math/tex">p_0</script></span> 开始, 总有 <span class="arithmatex"><span class="MathJax_Preview">\vec{p_t} \rightarrow \vec{\pi}</span><script type="math/tex">\vec{p_t} \rightarrow \vec{\pi}</script></span>.</li>
-<li>惰性随机游走: <span class="arithmatex"><span class="MathJax_Preview">p_t = \frac12(I + AD^{-1})^t p_0</span><script type="math/tex">p_t = \frac12(I + AD^{-1})^t p_0</script></span> (对二分图有效)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">D^{-\frac12}WD^{\frac12} = D^{-\frac12}AD^{-\frac12} = \mathcal{A}</span><script type="math/tex">D^{-\frac12}WD^{\frac12} = D^{-\frac12}AD^{-\frac12} = \mathcal{A}</script></span> 相似, 拥有相同的特征值.、<ol>
-<li>对于d正则图比较特殊, <span class="arithmatex"><span class="MathJax_Preview">W = \frac 1 d A= I- \frac 1 d L</span><script type="math/tex">W = \frac 1 d A= I- \frac 1 d L</script></span>, 可以将 <span class="arithmatex"><span class="MathJax_Preview">p_0</span><script type="math/tex">p_0</script></span> 展开, 从大到小排序的特征值<span class="arithmatex"><span class="MathJax_Preview">\alpha_1 = 1</span><script type="math/tex">\alpha_1 = 1</script></span>, 特征值位于 <span class="arithmatex"><span class="MathJax_Preview">[-1, 1]</span><script type="math/tex">[-1, 1]</script></span> 中, <span class="arithmatex"><span class="MathJax_Preview">a_n = -1</span><script type="math/tex">a_n = -1</script></span> 当且仅当图是二分图.</li>
-<li>对联通的非二分图, <span class="arithmatex"><span class="MathJax_Preview">p_t \rightarrow c_1v_1 = \frac 1 n \vec{1} = \vec{\pi}</span><script type="math/tex">p_t \rightarrow c_1v_1 = \frac 1 n \vec{1} = \vec{\pi}</script></span></li>
-<li>对惰性的随机游走, 特征值发生了 <span class="arithmatex"><span class="MathJax_Preview">[-1,1] \rightarrow [0,1]</span><script type="math/tex">[-1,1] \rightarrow [0,1]</script></span> 的保持相对距离的映射.</li>
+<li><span class="arithmatex">\(p_{t+1} = (AD^{-1}p_t)\)</span>, <span class="arithmatex">\(p_t = (AD^{-1})^t p_0\)</span></li>
+<li>稳态分布: <span class="arithmatex">\(\vec{\pi} = \frac{\vec{d}}{2m}\)</span>, 是 <span class="arithmatex">\(AD^{-1}\)</span> 的一个右特征向量, 特征值为1.</li>
+<li>无向图上的马尔可夫基本定理: 对于任意有限的, 连通的, 非二分图, 不管从什么养的 <span class="arithmatex">\(p_0\)</span> 开始, 总有 <span class="arithmatex">\(\vec{p_t} \rightarrow \vec{\pi}\)</span>.</li>
+<li>惰性随机游走: <span class="arithmatex">\(p_t = \frac12(I + AD^{-1})^t p_0\)</span> (对二分图有效)</li>
+<li><span class="arithmatex">\(W\)</span> 与 <span class="arithmatex">\(D^{-\frac12}WD^{\frac12} = D^{-\frac12}AD^{-\frac12} = \mathcal{A}\)</span> 相似, 拥有相同的特征值.、<ol>
+<li>对于d正则图比较特殊, <span class="arithmatex">\(W = \frac 1 d A= I- \frac 1 d L\)</span>, 可以将 <span class="arithmatex">\(p_0\)</span> 展开, 从大到小排序的特征值<span class="arithmatex">\(\alpha_1 = 1\)</span>, 特征值位于 <span class="arithmatex">\([-1, 1]\)</span> 中, <span class="arithmatex">\(a_n = -1\)</span> 当且仅当图是二分图.</li>
+<li>对联通的非二分图, <span class="arithmatex">\(p_t \rightarrow c_1v_1 = \frac 1 n \vec{1} = \vec{\pi}\)</span></li>
+<li>对惰性的随机游走, 特征值发生了 <span class="arithmatex">\([-1,1] \rightarrow [0,1]\)</span> 的保持相对距离的映射.</li>
 </ol>
 </li>
 <li>混合时间:<ul>
-<li>定义谱间隔 <span class="arithmatex"><span class="MathJax_Preview">\lambda = \min{1-\alpha_2, 1-|\alpha_n|}</span><script type="math/tex">\lambda = \min{1-\alpha_2, 1-|\alpha_n|}</script></span></li>
-<li>定理: <span class="arithmatex"><span class="MathJax_Preview">\epsilon-</span><script type="math/tex">\epsilon-</script></span> 混合时间.  </li>
+<li>定义谱间隔 <span class="arithmatex">\(\lambda = \min{1-\alpha_2, 1-|\alpha_n|}\)</span></li>
+<li>定理: <span class="arithmatex">\(\epsilon-\)</span> 混合时间.  </li>
 </ul>
 </li>
 </ol>
 <h2 id="_9">图与代数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ol>
-<li>二分图邻接矩阵: <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 特征值关于 <span class="arithmatex"><span class="MathJax_Preview">x=0</span><script type="math/tex">x=0</script></span> 对称.</li>
-<li>图邻接矩阵最大特征值 <span class="arithmatex"><span class="MathJax_Preview">deg_{avg}(G) \leqslant \lambda_{max}\leqslant deg_{max}(G)</span><script type="math/tex">deg_{avg}(G) \leqslant \lambda_{max}\leqslant deg_{max}(G)</script></span></li>
-<li>Laplacian Matrix 的一个特征值是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>, 对应特征向量是 <span class="arithmatex"><span class="MathJax_Preview">\vec{1}</span><script type="math/tex">\vec{1}</script></span>, 是半正定的.</li>
-<li>当且仅当特征值 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的重数为1时, <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 连通. <span class="arithmatex"><span class="MathJax_Preview">x^TLx = \sum(x_i-x_j)^2</span><script type="math/tex">x^TLx = \sum(x_i-x_j)^2</script></span></li>
+<li>二分图邻接矩阵: <span class="arithmatex">\(A\)</span> 特征值关于 <span class="arithmatex">\(x=0\)</span> 对称.</li>
+<li>图邻接矩阵最大特征值 <span class="arithmatex">\(deg_{avg}(G) \leqslant \lambda_{max}\leqslant deg_{max}(G)\)</span></li>
+<li>Laplacian Matrix 的一个特征值是 <span class="arithmatex">\(0\)</span>, 对应特征向量是 <span class="arithmatex">\(\vec{1}\)</span>, 是半正定的.</li>
+<li>当且仅当特征值 <span class="arithmatex">\(0\)</span> 的重数为1时, <span class="arithmatex">\(G\)</span> 连通. <span class="arithmatex">\(x^TLx = \sum(x_i-x_j)^2\)</span></li>
 <li>Perron-Frobenius定理: 对于非负, 不可约, 非周期的矩阵 </li>
 <li>最大特征值重数为1</li>
 <li>对应特征向量中, 每个维度都是非0且同号的.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">|\lambda_i| &lt; \lambda_1</span><script type="math/tex">|\lambda_i| < \lambda_1</script></span></li>
+<li><span class="arithmatex">\(|\lambda_i| &lt; \lambda_1\)</span></li>
 </ol>
 <h2 id="_10">电阻与电路网络<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ol>
 <li><del>为什么我会在这复习物理QAQ</del> 解决之前的留下的 Hitting&amp;Cover Time 问题.</li>
 <li>基本概念</li>
 <li>基尔霍夫定律: in=out</li>
-<li>欧姆定律: <span class="arithmatex"><span class="MathJax_Preview">\Delta \phi = ir</span><script type="math/tex">\Delta \phi = ir</script></span> </li>
-<li>电阻 <span class="arithmatex"><span class="MathJax_Preview">r_e</span><script type="math/tex">r_e</script></span>, 电导率 <span class="arithmatex"><span class="MathJax_Preview">w_e = \frac1{r_e}</span><script type="math/tex">w_e = \frac1{r_e}</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">b_v</span><script type="math/tex">b_v</script></span> 表示外界流到 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的电流</li>
-<li>若 <span class="arithmatex"><span class="MathJax_Preview">w_{uv} = 1</span><script type="math/tex">w_{uv} = 1</script></span>(电阻为1), 求解<span class="arithmatex"><span class="MathJax_Preview">\vec{b} = L \vec{\phi}</span><script type="math/tex">\vec{b} = L \vec{\phi}</script></span> (That's All We Want)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">L = BWB^T</span><script type="math/tex">L = BWB^T</script></span>, <span class="arithmatex"><span class="MathJax_Preview">b= L\phi = BWB^T\phi = B\vec{i}</span><script type="math/tex">b= L\phi = BWB^T\phi = B\vec{i}</script></span></li>
-<li>若存在满足条件的解, 则 <span class="arithmatex"><span class="MathJax_Preview">b = L\phi \perp \vec{1}</span><script type="math/tex">b = L\phi \perp \vec{1}</script></span> (外部流出和流入的相等) (其实这是个充要条件)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">L^{+} = \sum_{i=2}^n \frac1{\lambda_i}v_iv_i^T</span><script type="math/tex">L^{+} = \sum_{i=2}^n \frac1{\lambda_i}v_iv_i^T</script></span> 是维尼. 全体解集是 <span class="arithmatex"><span class="MathJax_Preview">\{L^+\vec{b} + c \vec{1} \}</span><script type="math/tex">\{L^+\vec{b} + c \vec{1} \}</script></span>, 若固定一点电势, 有唯一解.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">R_{eff}</span><script type="math/tex">R_{eff}</script></span> 等效电阻为电势差. <span class="arithmatex"><span class="MathJax_Preview">R_{eff}(s,t) = b^T_{st}L^+b_{st}</span><script type="math/tex">R_{eff}(s,t) = b^T_{st}L^+b_{st}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">b_{st}(s) = 1, (t=-1)</span><script type="math/tex">b_{st}(s) = 1, (t=-1)</script></span></li>
-<li>Thompson's Principle: <span class="arithmatex"><span class="MathJax_Preview">R_{eff}(s,t) \leqslant \epsilon(\vec{g})</span><script type="math/tex">R_{eff}(s,t) \leqslant \epsilon(\vec{g})</script></span>, 单位电流最小化能量.</li>
-<li>Commute Time: <span class="arithmatex"><span class="MathJax_Preview">C_{s,t} = 2mR_{eff}(s,t)</span><script type="math/tex">C_{s,t} = 2mR_{eff}(s,t)</script></span>, <span class="arithmatex"><span class="MathJax_Preview">m = |E(G)|</span><script type="math/tex">m = |E(G)|</script></span></li>
-<li>推论: <span class="arithmatex"><span class="MathJax_Preview">C_{u,v} \leqslant 2m</span><script type="math/tex">C_{u,v} \leqslant 2m</script></span></li>
-<li>连通图遍历时间最多为 <span class="arithmatex"><span class="MathJax_Preview">2m(n-1)</span><script type="math/tex">2m(n-1)</script></span></li>
+<li>欧姆定律: <span class="arithmatex">\(\Delta \phi = ir\)</span> </li>
+<li>电阻 <span class="arithmatex">\(r_e\)</span>, 电导率 <span class="arithmatex">\(w_e = \frac1{r_e}\)</span></li>
+<li><span class="arithmatex">\(b_v\)</span> 表示外界流到 <span class="arithmatex">\(v\)</span> 的电流</li>
+<li>若 <span class="arithmatex">\(w_{uv} = 1\)</span>(电阻为1), 求解<span class="arithmatex">\(\vec{b} = L \vec{\phi}\)</span> (That's All We Want)</li>
+<li><span class="arithmatex">\(L = BWB^T\)</span>, <span class="arithmatex">\(b= L\phi = BWB^T\phi = B\vec{i}\)</span></li>
+<li>若存在满足条件的解, 则 <span class="arithmatex">\(b = L\phi \perp \vec{1}\)</span> (外部流出和流入的相等) (其实这是个充要条件)</li>
+<li><span class="arithmatex">\(L^{+} = \sum_{i=2}^n \frac1{\lambda_i}v_iv_i^T\)</span> 是维尼. 全体解集是 <span class="arithmatex">\(\{L^+\vec{b} + c \vec{1} \}\)</span>, 若固定一点电势, 有唯一解.</li>
+<li><span class="arithmatex">\(R_{eff}\)</span> 等效电阻为电势差. <span class="arithmatex">\(R_{eff}(s,t) = b^T_{st}L^+b_{st}\)</span>, <span class="arithmatex">\(b_{st}(s) = 1, (t=-1)\)</span></li>
+<li>Thompson's Principle: <span class="arithmatex">\(R_{eff}(s,t) \leqslant \epsilon(\vec{g})\)</span>, 单位电流最小化能量.</li>
+<li>Commute Time: <span class="arithmatex">\(C_{s,t} = 2mR_{eff}(s,t)\)</span>, <span class="arithmatex">\(m = |E(G)|\)</span></li>
+<li>推论: <span class="arithmatex">\(C_{u,v} \leqslant 2m\)</span></li>
+<li>连通图遍历时间最多为 <span class="arithmatex">\(2m(n-1)\)</span></li>
 <li>有种感觉越往下写越详细了,,, 虽然并不是我的本意, 所以————</li>
 </ol>
 <h2 id="_11">线性规划+凸优化<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
@@ -1279,6 +1279,12 @@
     
     
       <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
