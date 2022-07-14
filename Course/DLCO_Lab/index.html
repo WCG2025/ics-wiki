@@ -17,7 +17,7 @@
     
     
       
-        <title>软件工程 - ICS Wiki</title>
+        <title>数字逻辑与计算机组成实验 - ICS Wiki</title>
       
     
     
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              软件工程
+              数字逻辑与计算机组成实验
             
           </span>
         </div>
@@ -641,14 +641,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
       
       
@@ -683,19 +681,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Software/" class="md-nav__link">
         软件工程
       </a>
-      
     </li>
   
 
@@ -726,12 +716,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
       
       
       
@@ -752,11 +744,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../DLCO_Lab/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         数字逻辑与计算机组成实验
       </a>
+      
     </li>
   
 
@@ -851,15 +851,34 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Birdium/ics-wiki/edit/main/docs/Course/Software.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/Birdium/ics-wiki/edit/main/docs/Course/DLCO_Lab.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>软件工程</h1>
+  <h1>数字逻辑与计算机组成实验</h1>
 
-
+<p>主要是作为数字逻辑与计算机组成(DLCO)这门课的后续课程，在21级及以后作为专业选修课放在大三下的位置，20级需要跨专业选修。</p>
+<p>课程主要分为两个部分，前半学期会通过几个简单的小实验熟悉Quartus+Cyclone V实验平台，后半学期则会利用FPGA开发板自底向上搭建出一个完整的RISC-V计算机系统。属于上完会比较有成就感的实验课。</p>
+<p>前期折磨的点主要在于配环境，后期时间则大部分花费在硬件语言的编译和时序Debug上。硬件描述语言需要一些时间适应，如果对Verilog不太熟悉也可以自行在HDLBits这类网站上刷题练习，课程提供的头歌也是很不错的选择。</p>
+<p>成绩构成包括</p>
+<ul>
+<li>11次OJ</li>
+<li>12次实验验收</li>
+<li>其中实验12总分相当于两个普通实验，实验完成可选功能会有加分</li>
+</ul>
+<p>每次实验会给1~2周的时间完成，最后的大实验可能需要提前ddl一个月开始着手，否则等到考试周再验收可能会来不及/打乱安排。</p>
+<p>往届会出现大家都很卷，最后老师强行正态分布的操作。考虑到这门课后面会变成选修课，因此后续的给分可能会转好。</p>
+<p>较难的实验主要如下：</p>
+<ul>
+<li>实验7  键盘</li>
+<li>实验9  硬件实现终端</li>
+<li>实验12 综合大实验（可选功能中的流水线）</li>
+</ul>
+<p>实际上最难的是实验9，因为前序实验都在为实验12做铺垫，而实验9则是完完全全独立的实验(对后续实验没有帮助)。</p>
+<p>2020届有同学是按照7-&gt;8-&gt;10-&gt;11-&gt;12-&gt;9的顺序来做的，即利用最后的计算机系统来实现软件终端，这样同样也可以获得实验9的满分，相当于少做一个实验(但是对验收的节奏有所要求，需要提前做完12)，仅供参考。</p>
+<p>由于这门课是完完全全按照实验验收来给分的，因此给分比较客观可控，预计正常完成全部实验的得分在90+，稍微提前验收几次&amp;大实验完成若干可选功能可以得到更好的分数。实验报告可能会有隐性的长度要求，这个自己把握吧。</p>
 
               
             </article>
@@ -875,7 +894,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../FLA/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 形式语言与自动机" rel="prev">
+        <a href="../Network/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 计算机网络" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -884,20 +903,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              形式语言与自动机
+              计算机网络
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Network/" class="md-footer__link md-footer__link--next" aria-label="下一页: 计算机网络" rel="next">
+        <a href="../../test/" class="md-footer__link md-footer__link--next" aria-label="下一页: test" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              计算机网络
+              test
             </div>
           </div>
           <div class="md-footer__button md-icon">
